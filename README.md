@@ -1,7 +1,4 @@
-Markdown
-
-```
-# Lista de Tarefas (To-do-List Python)
+# Gerenciador de Tarefas
 
 Um gerenciador de tarefas interativo desenvolvido em Python para consolidar conceitos de manipulação de dados, persistência de arquivos e lógica de controle. O projeto foi estruturado para simular uma aplicação real de produtividade no terminal, garantindo que o usuário possa organizar sua rotina de forma simples e eficiente.
 
@@ -9,44 +6,33 @@ Um gerenciador de tarefas interativo desenvolvido em Python para consolidar conc
 
 A aplicação permite ao usuário gerenciar suas atividades diárias diretamente pelo terminal através de um menu intuitivo.
 * **Gerenciamento Completo (CRUD):** Permite criar, visualizar, marcar como concluída e excluir tarefas da lista.
-* **Interface Organizada:** Exibe o status de cada tarefa de forma clara (ex: [ ] Em andamento / [X] Concluída) e limpa o terminal para manter a navegação fluida.
-* **Persistência de Dados (Opcional - remova se não usar):** Salva as tarefas automaticamente em um arquivo de texto para que os dados não sumam ao fechar o programa.
+* **Interface Organizada:** Limpa o terminal e exibe um menu bem estruturado para fácil navegação.
+* **Persistência de Dados:** Salva as tarefas automaticamente em um arquivo JSON para que os dados não se percam ao fechar o programa.
 * **Tratamento de Erros:** Validação de opções do menu e índices de tarefas, impedindo que o programa feche sozinho caso o usuário digite algo inválido.
 
-## Como testar
+## Como rodar
 
 Se você tiver o Python instalado na sua máquina, siga os passos abaixo:
 
-1. Clone o repositório:
-   ```bash
-   git clone [https://github.com/GabrielOliveira8684/todo-list-python.git](https://github.com/GabrielOliveira8684/todo-list-python.git)
-
-```
-
 1. Acesse a pasta do projeto:
-Bash
-
-```
-cd todo-list-python
-
+```bash
+cd TO-DO-LIST
 ```
 
-2. Rode o script:
-Bash
-
-```
-python main.py
-
+2. Execute o arquivo:
+```bash
+python lista.py
 ```
 
-(Nota: Ajuste o `todo-list-python` e o `main.py` caso os nomes das suas pastas ou arquivos sejam diferentes!)
-O que eu pratiquei e aprendi nesse projeto
+## O que eu pratiquei e aprendi nesse projeto
+
 Esse projeto foi fundamental para subir um degrau na organização de código e manipulação de coleções em Python:
 
-* Manipulação de Estruturas de Dados: Uso prático de listas e dicionários para mapear o ID, a descrição e o status de conclusão de cada tarefa.
-* Modularização com Funções (def): Divisão do código em blocos específicos para cada ação (adicionar, listar, remover), mantendo o loop principal limpo e legível.
-* Manipulação de Arquivos (I/O - Opcional): Uso dos blocos `with open()` para ler e escrever dados externos, garantindo o fechamento seguro do arquivo.
-* Laços de Repetição e Condicionais: Aplicação avançada de loops `while` e blocos `if/elif/else` para o controle do fluxo do menu principal.
-* Experiência de Usuário no Terminal: Uso da biblioteca `os` para limpar a tela e formatação de strings (`f-strings`) para criar tabelas visuais legíveis no terminal.
+* Manipulação de Estruturas de Dados: Uso de dicionários para armazenar tarefas em duas categorias (Completas e Incompletas) e listas para armazenar cada tarefa.
+* Modularização com Funções: Criação de função para salvar dados, mantendo o código organizado.
+* Manipulação de Arquivos (I/O): Uso de JSON para persistência de dados, lendo e escrevendo dados externos com `json.load()` e `json.dump()`.
+* Laços de Repetição e Condicionais: Uso de loops `while` e blocos `if/elif/else` para controlar o fluxo do menu principal.
+* Experiência de Usuário no Terminal: Uso da biblioteca `os` e `platform` para limpar a tela de forma multiplataforma (Windows e Linux/Mac) e formatação de strings para criar menus visuais.
+* Tratamento de Exceções: Captura de erros com `try/except` para validação de entrada do usuário e manipulação de índices.
+
 Valeu!
-me envia isso em um bloco de odigo pra eu copiar e colar no readme
